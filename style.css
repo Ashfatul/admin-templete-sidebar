@@ -1,0 +1,112 @@
+* {
+   margin: 0;
+   padding: 0;
+   transition: all 0.4s ease-in-out;
+}
+main {
+   display: flex;
+}
+
+.content {
+   flex-grow: 1;
+   padding: 50px;
+}
+
+nav {
+   position: relative;
+}
+
+nav .menu-toggler::after {
+   content: "\f0c9";
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   left: 250px;
+   font-family: "Font Awesome 5 Free";
+   font-weight: 900;
+   color: #ffffff;
+   cursor: pointer;
+}
+
+nav .menu-toggler.open::after {
+   content: "\f0a9";
+}
+
+header nav {
+   display: flex;
+   justify-content: space-between;
+   background: #615ff1;
+   padding: 10px;
+   align-items: center;
+   box-shadow: 0 0 10px #000000;
+}
+header img.logo {
+   height: 40px;
+   width: auto;
+}
+
+header nav ul {
+   display: flex;
+   gap: 30px;
+}
+header nav ul li {
+   list-style: none;
+}
+
+header nav ul li a {
+   text-decoration: none;
+   color: #fff;
+}
+
+header nav ul li a:hover {
+   color: rgb(27, 226, 27);
+}
+
+aside.sidebar {
+   width: 250px;
+   background: #615ff1;
+   height: calc(100vh - 60px);
+}
+
+aside.sidebar .side-menu ul {
+   padding-top: 50px;
+}
+
+aside.sidebar .side-menu ul li {
+   list-style: none;
+}
+
+aside.sidebar .side-menu ul li a {
+   text-decoration: none;
+   color: #ffffff;
+   padding: 20px;
+   display: block;
+}
+
+aside.sidebar .side-menu ul li a:hover {
+   background: lightgray;
+   color: #000;
+}
+.sidebar.mini {
+   width: 80px;
+}
+
+.sidebar.mini a {
+   text-align: center;
+}
+
+.sidebar.mini a span {
+   display: none;
+}
+
+.sidebar.mini a:hover {
+   width: 250px;
+   text-align: left;
+   z-index: 999;
+   display: block;
+   position: relative;
+}
+
+.sidebar.mini a:hover span {
+   display: inline;
+}
