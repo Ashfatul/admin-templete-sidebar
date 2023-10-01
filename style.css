@@ -66,6 +66,7 @@ aside.sidebar {
    width: 250px;
    background: #615ff1;
    height: calc(100vh - 60px);
+   overflow: auto;
 }
 
 aside.sidebar .side-menu ul {
@@ -109,4 +110,40 @@ aside.sidebar .side-menu ul li a:hover {
 
 .sidebar.mini a:hover span {
    display: inline;
+}
+
+aside.sidebar .side-menu ul li ul.submenu {
+   padding-top: 0px;
+   display: none;
+}
+
+aside.sidebar .side-menu ul li.show-submenu ul.submenu {
+   display: block;
+}
+
+li.has-submenu {
+   position: relative;
+}
+
+li.has-submenu::after {
+   content: "\f078";
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   right: 20px;
+   font-family: "Font Awesome 5 Free";
+   font-weight: 900;
+   color: #ffffff;
+   cursor: pointer;
+}
+
+li.has-submenu.open::after {
+   content: "\f077";
+}
+
+.content img {
+   height: calc(100vh - 170px);
+   width: 100%;
+   object-fit: cover;
+   object-position: center;
 }
